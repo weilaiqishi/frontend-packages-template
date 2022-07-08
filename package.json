@@ -8,6 +8,8 @@
     "packages/*"
   ],
   "scripts": {
+    "preii": "npm i -g commitizen",
+    "ii": "lerna bootstrap",
     "build": "rimraf -rf packages/*/{lib,dist,esm} && lerna run build",
     "build:docs": "dumi build",
     "start": "dumi dev",
@@ -30,6 +32,7 @@
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
     "@commitlint/prompt-cli": "^14.1.0",
+    "@rollup/plugin-commonjs": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.9.1",
     "@typescript-eslint/parser": "^4.8.2",
     "conventional-commit-types": "^2.2.0",
@@ -46,16 +49,14 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-vue": "^7.0.1",
     "ghooks": "^2.0.4",
+    "jest": "^26.0.0",
+    "jest-dom": "^3.1.2",
+    "jest-watch-lerna-packages": "^1.1.0",
     "lerna": "^4.0.0",
     "lint-staged": "^8.2.1",
     "prettier": "^2.2.1",
     "pretty-format": "^24.0.0",
     "pretty-quick": "^3.1.0",
-    "staged-git-files": "^1.1.2",
-    "ts-node": "^10.6.0",
-    "typescript": "^4.1.5",
-    "tslib": "^2.4.0",
-
     "rollup": "^2.37.1",
     "rollup-plugin-dts": "^2.0.0",
     "rollup-plugin-external-globals": "^0.6.1",
@@ -64,14 +65,16 @@
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
-    "@rollup/plugin-commonjs": "^17.0.0",
-
-    "jest": "^26.0.0",
-    "jest-watch-lerna-packages": "^1.1.0",
-    "jest-dom": "^3.1.2",
-    "ts-jest": "^26.0.0"
+    "staged-git-files": "^1.1.2",
+    "ts-jest": "^26.0.0",
+    "ts-node": "^10.6.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.1.5"
   },
   "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
     "ghooks": {
       "pre-commit": "lint-staged",
       "commit-msg": "commitlint --edit"
@@ -87,7 +90,5 @@
       "pretty-quick --staged",
       "git add"
     ]
-  },
-  "dependencies": {
   }
 }
