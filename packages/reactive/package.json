@@ -1,5 +1,5 @@
 {
-  "name": "@formily/reactive",
+  "name": "@kimeng/test-lerna-publish",
   "version": "1.0.1-alpha.0",
   "license": "MIT",
   "main": "lib",
@@ -39,7 +39,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "ac79c196ae9324889aca5e0501146f9b37b04283",
+  "gitHead": "dd9d1c5f54704e972a34c068268017cb54a826bc",
   "dependencies": {
     "@formily/reactive-react": "^2.1.9",
     "@formily/shared": "^2.1.9"
